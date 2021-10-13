@@ -50,10 +50,6 @@ new_window pixel 0
 # thin borders
 # hide_edge_borders both
 
-# Set inner/outer gaps
-gaps inner 0
-gaps outer 0
-
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -486,4 +482,10 @@ bindsym $mod+period move workspace to output right
 exec --no-startup-id picom
 
 exec_always --no-startup-id xset r rate 300 100
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
 
