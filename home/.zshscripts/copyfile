@@ -1,0 +1,4 @@
+copyfile() {
+  cat $1 | xclip -sel c
+
+}

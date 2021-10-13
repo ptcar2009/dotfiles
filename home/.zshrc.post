@@ -1,0 +1,39 @@
+# vim: set et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker nospell:
+
+# Shell Sources {
+  ## Brew {
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  ## }
+
+  ## Fzf {
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  ## }
+
+  ## Haskell {
+    [ -f "/home/ptcar/.ghcup/env" ] && source "/home/ptcar/.ghcup/env" # ghcup-env
+  ## }
+
+  ## Goenv {
+    eval "$(goenv init -)"
+  ## }
+
+  ## P10k {
+    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  ## }
+
+# }
+
+# Utility {
+
+  ## ssh key-agent {
+    eval `ssh-agent` &> /dev/null
+    ssh-add
+  ## }
+
+  ## useful scripts
+  for file in $HOME/.zshscripts/*; do
+    . $file
+  done
+
+# }
+

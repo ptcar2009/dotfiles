@@ -1,0 +1,10 @@
+$HOME/.cargo/bin
+/opt/oracle/instantclient_21_1
+$GOENV_ROOT/bin
+$GOPATH/bin
+$GOROOT/bin
+${KREW_ROOT:-$HOME/.krew}/bin
+$HOME/bin
+$HOME/.local/bin
+.asdf/installs/golang/1.17.1/packages/bin
+/home/ptcar/.asdf/installs/nodejs/16.10.0/.npm/bin

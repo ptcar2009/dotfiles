@@ -1,0 +1,10 @@
+chpwd () {
+  [ -f ./.env ] && source ./.env
+  set -- "$(git rev-parse --show-toplevel 2>/dev/null)" 2>/dev/null
+  # If cd'ing into a git working copy and not within the same working copy
+  if [ -n "$1" ] && [ "$1" != "$vc_root" ]; then
+    vc_root="$1"
+    git fetch --prune &> /dev/null
+  fi
+}
+chpwd
