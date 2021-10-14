@@ -108,6 +108,22 @@ link_all_files() {
     done
 }
 
+create_local_file() {
+    local dst=$1
+
+    if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
+    then
+        touch $dst;
+    fi
+}
+
+create_local_files() {
+    create_local_file ".zshrc.local"
+    create_local_file ".zshrc.env.local"
+    create_local_file ".zshrc.post.local"
+    create_local_file ".zshrc.aliases.local"
+}
+
 download_zsh_plugins() {
     info "Downloading zsh-autosuggestions"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -115,7 +131,10 @@ download_zsh_plugins() {
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     infor "Downloading powerlevel10k"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    infor "Installing spf13-vim"
+    sh <(curl https://j.mp/spf13-vim3 -L)
 }
 
 link_all_files
 download_zsh_plugins
+
