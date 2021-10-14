@@ -129,9 +129,9 @@ download_zsh_plugins() {
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     info "Downloading zsh-syntax hightlighting"
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    infor "Downloading powerlevel10k"
+    info "Downloading powerlevel10k"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    infor "Installing spf13-vim"
+    info "Installing spf13-vim"
     sh <(curl https://j.mp/spf13-vim3 -L)
 }
 
