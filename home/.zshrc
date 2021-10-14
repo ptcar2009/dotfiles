@@ -6,16 +6,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source ~/.zshrc.env
+source ~/.zshrc.local
 source ~/.zshrc.post
+source ~/.zshrc.post.local
 source ~/.zshrc.aliases
+source ~/.zshrc.aliases.local
 
-export ZSH="$HOME/.oh-my-zsh"
-
-# set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# see https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
 plugins=(
   asdf
   zoxide
@@ -35,4 +33,3 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-# forcing tmux to have 256 colors
