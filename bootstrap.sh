@@ -37,8 +37,6 @@ link_file () {
 
       if [ "$currentSrc" == "$src" ]
       then
-      echo BANANA
-
         skip=true;
 
       else
@@ -98,7 +96,7 @@ link_file () {
 }
 
 link_all_files() {
-      local overwrite_all=false backup_all=false skip_all=false
+    local overwrite_all=false backup_all=false skip_all=false
     for src in $(ls -d $PWD/.config/*); do
         link_file $src $HOME/.config/${src##*/}
     done

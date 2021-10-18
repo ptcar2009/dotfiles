@@ -14,7 +14,6 @@
 
     workspace_layout default
 
-
     new_window pixel 0
 
     floating_modifier $mod
@@ -62,23 +61,23 @@
 
 # }
 
-## Layout {
-    # split in vertical orientation
-    bindsym $mod+v split v
-
-    # enter fullscreen mode for the focused container
-    bindsym $mod+f fullscreen toggle
-
-    # change container layout (stacked, tabbed, toggle split)
-    bindsym $mod+s layout stacking
-    bindsym $mod+g layout tabbed
-    bindsym $mod+e layout toggle split
-
-    # toggle tiling / floating
-    bindsym $mod+Shift+space floating toggle
-## }
 
 ## Key bindings {
+    ## Layout {
+        # split in vertical orientation
+        bindsym $mod+v split v
+
+        # enter fullscreen mode for the focused container
+        bindsym $mod+f fullscreen toggle
+
+        # change container layout (stacked, tabbed, toggle split)
+        bindsym $mod+s layout stacking
+        bindsym $mod+g layout tabbed
+        bindsym $mod+e layout toggle split
+
+        # toggle tiling / floating
+        bindsym $mod+Shift+space floating toggle
+    ## }
     ## Movement {
         ## Workspace movement {
             # switch to workspace
